@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Open Spirits]]></title>
+  <link href="http://pawa.github.com/atom.xml" rel="self"/>
+  <link href="http://pawa.github.com/"/>
+  <updated>2012-04-12T00:25:34+08:00</updated>
+  <id>http://pawa.github.com/</id>
+  <author>
+    <name><![CDATA[Stone Wang]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[First Octopress Blog]]></title>
+    <link href="http://pawa.github.com/blog/2012/04/11/first-octopress-blog/"/>
+    <updated>2012-04-11T22:51:00+08:00</updated>
+    <id>http://pawa.github.com/blog/2012/04/11/first-octopress-blog</id>
+    <content type="html"><![CDATA[<p>用上了 github + octopress</p>
+]]></content>
+  </entry>
+  
+</feed>
