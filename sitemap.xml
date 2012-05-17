@@ -2,14 +2,22 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://pawa.github.com/blog/2012/04/11/first-octopress-blog/</loc>
-        <lastmod>2012-04-12T00:25:07+08:00</lastmod>
+        <lastmod>2012-04-12T10:35:00+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://pawa.github.com/blog/2012/05/17/new-post/</loc>
+        <lastmod>2012-05-17T10:28:57+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://pawa.github.com/blog/2012/05/17/ubuntu-10-dot-04-dot-3-kernel-bug/</loc>
+        <lastmod>2012-05-17T11:51:47+08:00</lastmod>
     </url>
     <url>
         <loc>http://pawa.github.com/blog/archives/</loc>
-        <lastmod>2012-04-12T00:25:07+08:00</lastmod>
+        <lastmod>2012-05-17T11:51:47+08:00</lastmod>
     </url>
     <url>
         <loc>http://pawa.github.com/</loc>
-        <lastmod>2012-04-12T00:25:07+08:00</lastmod>
+        <lastmod>2012-05-17T11:51:47+08:00</lastmod>
     </url>
 </urlset>

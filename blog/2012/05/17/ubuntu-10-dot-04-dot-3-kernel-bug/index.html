@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Open Spirits</title>
+    <title>ubuntu-10.04.3-kernel-bug - Open Spirits</title>
     <meta name="author" content="Stone Wang">
 
     
@@ -50,13 +50,9 @@
 
 </header>
 	
-	<div id="content" class="inner">
-
-
-    <article class="post">
-    <h1 class="title"><a href="/blog/2012/05/17/ubuntu-10-dot-04-dot-3-kernel-bug/">ubuntu-10.04.3-kernel-bug</a></h1>
-    <div class="entry">
-        <p>运行了200天的 Ubuntu 10.04.3 在没有任何征兆的情况下突然系统负载(Load)狂高，Java 进程完全不能启动，但是有些服务 MySQL / Redis 等却不受影响，因为害怕影响线上的服务，所以没有全部重启，看着系统负载从10一直飙升到500，后来干脆连 SSH 也进不去了。最后只能悲剧的重启，重启后一切恢复正常。</p>
+	<div id="content" class="inner"><article class="post">
+    <h1 class="title">ubuntu-10.04.3-kernel-bug</h1>
+    <div class="entry"><p>运行了200天的 Ubuntu 10.04.3 在没有任何征兆的情况下突然系统负载(Load)狂高，Java 进程完全不能启动，但是有些服务 MySQL / Redis 等却不受影响，因为害怕影响线上的服务，所以没有全部重启，看着系统负载从10一直飙升到500，后来干脆连 SSH 也进不去了。最后只能悲剧的重启，重启后一切恢复正常。</p>
 
 <p>查看日志发现一些内核的报错</p>
 
@@ -83,10 +79,7 @@ May 16 10:07:16 w2 kernel: [ 8985.860399]  [&lt;ffffffff810121b2&gt;] ? system_c
 <p>后来又发现就算是 2.6.32-33-server 也还是有 bug 的，<a href="http://jaseywang.me/2012/05/07/2-6-32-33-%E5%86%85%E6%A0%B8%E8%B7%91%E5%88%B0-208-%E5%A4%A9%E5%AE%95%E6%9C%BA">http://jaseywang.me/2012/05/07/2-6-32-33-%E5%86%85%E6%A0%B8%E8%B7%91%E5%88%B0-208-%E5%A4%A9%E5%AE%95%E6%9C%BA</a>，所有的特征都符合。</p>
 
 <p>解决办法就是升级内核，对于 10.04，选择用最新的 Ubuntu-10.04.4-amd6 吧，顺便把内核升级到 2.6.32-41-server 吧，以前的某些服务器用的是这个内核一直很稳定。在安装服务器时候还是要小心谨慎!</p>
-
-        
-        
-    </div>
+</div>
     <div class="meta">
         <div class="date">
 
@@ -113,72 +106,18 @@ May 16 10:07:16 w2 kernel: [ 8985.860399]  [&lt;ffffffff810121b2&gt;] ? system_c
         
     </div>
 </article>
-
-
-    <article class="post">
-    <h1 class="title"><a href="/blog/2012/05/17/new-post/">New-post</a></h1>
-    <div class="entry">
-        
-
-        
-        
-    </div>
-    <div class="meta">
-        <div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-17T10:28:00+08:00" pubdate data-updated="true">May 17<span>th</span>, 2012</time></div>
-        <div class="tags">
-
+<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+	<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4eb4a0c47196e907"></script>
 </div>
-        
-    </div>
-</article>
-
-
-    <article class="post">
-    <h1 class="title"><a href="/blog/2012/04/11/first-octopress-blog/">First Octopress Blog</a></h1>
-    <div class="entry">
-        <p>用上了 github + octopress</p>
-
-        
-        
-    </div>
-    <div class="meta">
-        <div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-04-11T22:51:00+08:00" pubdate data-updated="true">Apr 11<span>th</span>, 2012</time></div>
-        <div class="tags">
-
 </div>
-        
-    </div>
-</article>
-
-<nav id="pagenavi">
-    
-    
-    <a href="/blog/archives" class="center">Blog Archives</a>
-</nav></div>
 	<footer class="inner">Copyright &copy; 2012 Open Spirits</footer>
 	<script src="/javascripts/jquery.fancybox.pack.js"></script>
 <script src="/javascripts/slash.js"></script>
