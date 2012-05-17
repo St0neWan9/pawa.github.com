@@ -37,6 +37,10 @@
 	<div class="social right">
 		
 		
+		<a class="google" href="https://plus.google.com/115079110329808060996" title="Google+">Google+</a>
+		
+		
+		<a class="twitter" href="http://twitter.com/St0neWan9" title="Twitter">Twitter</a>
 		
 		
 		<a class="github" href="https://github.com/pawa" title="GitHub">GitHub</a>
@@ -50,6 +54,20 @@
 
 </header>
 	
+<div id="banner" class="inner">
+	<div class="container">
+		<ul class="feed"></ul>
+	</div>
+	<small><a href="http://twitter.com/St0neWan9">St0neWan9</a> @ <a href="http://twitter.com">Twitter</a></small>
+	<div class="loading">Loading...</div>
+</div>
+<script src="/javascripts/twitter.js"></script>
+<script type="text/javascript">
+	(function($){
+		$('#banner').getTwitterFeed('St0neWan9', 4, false);
+	})(jQuery);
+</script>
+
 	<div id="content" class="inner"><article class="post">
     <h1 class="title">Ubuntu 10.04.3 Kernel Bug</h1>
     <div class="entry"><p>运行了200天的 Ubuntu 10.04.3 在没有任何征兆的情况下突然系统负载(Load)狂高，Java 进程完全不能启动，但是有些服务 MySQL / Redis 等却不受影响，因为害怕影响线上的服务，所以没有全部重启，看着系统负载从10一直飙升到500，后来干脆连 SSH 也进不去了。最后只能悲剧的重启，重启后一切恢复正常。</p>
@@ -108,24 +126,52 @@ May 16 10:07:16 w2 kernel: [ 8985.860399]  [&lt;ffffffff810121b2&gt;] ? system_c
 
 </div>
         
+        <span class="comments"><a href="#disqus_thread">Comments</a></span>
+        
     </div>
 </article>
 <div class="share">
 	<div class="addthis_toolbox addthis_default_style ">
 	
+	<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+	
 	
 	<a class="addthis_button_tweet"></a>
 	
+	
+	<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
 	
 	<a class="addthis_counter addthis_pill_style"></a>
 	</div>
 	<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4eb4a0c47196e907"></script>
 </div>
+
+<section id="comment">
+    <h1 class="title">Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
 </div>
 	<footer class="inner">Copyright &copy; 2012 Open Spirits</footer>
 	<script src="/javascripts/jquery.fancybox.pack.js"></script>
 <script src="/javascripts/slash.js"></script>
 
+
+<script type="text/javascript">
+      var disqus_shortname = 'openspirits';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://pawa.github.com/blog/2012/05/17/ubuntu-10-dot-04-dot-3-kernel-bug/';
+        var disqus_url = 'http://pawa.github.com/blog/2012/05/17/ubuntu-10-dot-04-dot-3-kernel-bug/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
 
 
 
