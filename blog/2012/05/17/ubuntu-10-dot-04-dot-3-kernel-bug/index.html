@@ -40,6 +40,8 @@
 		<a class="google" href="https://plus.google.com/115079110329808060996" title="Google+">Google+</a>
 		
 		
+		<a class="twitter" href="http://twitter.com/St0neWan9" title="Twitter">Twitter</a>
+		
 		
 		<a class="github" href="https://github.com/pawa" title="GitHub">GitHub</a>
 		
@@ -52,6 +54,20 @@
 
 </header>
 	
+<div id="banner" class="inner">
+	<div class="container">
+		<ul class="feed"></ul>
+	</div>
+	<small><a href="http://twitter.com/St0neWan9">St0neWan9</a> @ <a href="http://twitter.com">Twitter</a></small>
+	<div class="loading">Loading...</div>
+</div>
+<script src="/javascripts/twitter.js"></script>
+<script type="text/javascript">
+	(function($){
+		$('#banner').getTwitterFeed('St0neWan9', 0, false);
+	})(jQuery);
+</script>
+
 	<div id="content" class="inner"><article class="post">
     <h1 class="title">Ubuntu 10.04.3 Kernel Bug</h1>
     <div class="entry"><p>运行了200天的 Ubuntu 10.04.3 在没有任何征兆的情况下突然系统负载(Load)狂高，Java 进程完全不能启动，但是有些服务 MySQL / Redis 等却不受影响，因为害怕影响线上的服务，所以没有全部重启，看着系统负载从10一直飙升到500，后来干脆连 SSH 也进不去了。最后只能悲剧的重启，重启后一切恢复正常。</p>
