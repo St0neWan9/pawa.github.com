@@ -7,7 +7,7 @@
     <meta name="author" content="Stone Wang">
 
     
-    <meta name="description" content="Plantyoffish: One Man Handled Site and Worth Billion Dollars Gone Fishin&#8217;: PlentyOfFish Architecture 一个不算新的旧闻，被 Highscalability 翻出来了。 &hellip;">
+    <meta name="description" content="Qcon Beijing 2013 一年一度的 Qcon Beijing 还是在四月底开始了，北京终于天气暖和了空气质量也有改善了，咳咳咳。还是记录一下这几天参会的感想吧。 Github Github 的运维工程师 Jesse Newland (某人非说此哥们名字是个女人名，刚查了一下 &hellip;">
     
     <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
 
@@ -56,6 +56,87 @@
 	
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+    <h1 class="title"><a href="/blog/2013/04/25/qcon-beijing-2013/">Qcon Beijing 2013</a></h1>
+    <div class="entry">
+        <p>一年一度的 Qcon Beijing 还是在四月底开始了，北京终于天气暖和了空气质量也有改善了，咳咳咳。还是记录一下这几天参会的感想吧。</p>
+
+<h3>Github</h3>
+
+<p>Github 的运维工程师 Jesse Newland (某人非说此哥们名字是个女人名，刚查了一下 Jesse 男女都能用 Jessie 才是女人名) 介绍了他们在运维过程中使用的一个自己开发的 Hubot 工具，这是一个聊天室，所有的工程师都在里边，还多了一个机器人就叫做 hubot &#8230;</p>
+
+<p>可以让这个机器人去部署代码，获取服务器的状态图，操作负载均衡关闭某个节点 &#8230; 总之是任何运维的事他都能干，这玩意开源了 <a href="http://hubot.github.com/">http://hubot.github.com/</a> 是 CoffeeScript + Node.js 写的。</p>
+
+<p>这个机器人可以跑在很多环境下，内置了 Campfire 和 Shell，社区还贡献了其他各种各样的 adapter，什么 IRC / Twitter / XMPP / Gtalk 等等，咱也可以整一个 Xueqiu 的，然后私信给他就可以让这机器人帮咱运维鸟 &#8230;</p>
+
+<p>说到为什么要用这个有一大堆原因，我印象深刻的是这三个：</p>
+
+<ul>
+<li>Teaching by doing</li>
+<li>Communicate by doing</li>
+<li>Things I haven&#8217;t asked recently</li>
+</ul>
+
+
+<p>还有个有意思的是有人问到权限问题，因为他们所有人都在这个聊天室，理论上谁都可以执行那些命令，怎么搞，哥们说了，基于信任，这个这个 &#8230; 恩恩</p>
+
+<p>还有一场 Jesse 讲 Github 架构，很简单，LVS / Nginx / Unicorn / Redis / Memcached / Mysql 他们是 Ruby 所以 App Server 是 Unicorn 除了这个其他语言换成相应的 Server 这个架构几乎是所有互联网产品的标准配置了。当然他们比较特殊的地方是因为要 Host Git Repo 所以在 Git 和 SSH 上做了很多的改造来适应他们的应用场景。</p>
+
+<p>最后 Jesse 还介绍了一下当时处理 12306 插件搞垮 Github 的事，凌晨4点他被报警吵醒，我其实觉得他到现在也不是很理解为啥那么多人买票，而且有那么多观光团去他发的那个问题下边评论，哈哈哈</p>
+
+<h3>安全宝</h3>
+
+<p>道哥从阿里去了安全宝，就冲着云端WAF去的应该是，他介绍了 WAF 的发展路径开源产品->商业硬件->云服务。</p>
+
+<p>因为 WAF 的复杂性和专业性花钱买保险还是很有必要的，只要有靠谱云服务，不要像前段时间 CloudFlare 坏掉影响78万客户1小时无法访问这种重大事故的情况下，我觉得还是可以尝试使用的。</p>
+
+<h3>沃趣</h3>
+
+<p>这是前阿里的几个 DBA/SA 同学的创业公司，主要做数据库方面的产品和服务，据说是很牛的一群人。主要介绍了一下最近几年比较常见的 Oracle / Mysql 的数据库架构，可能没有特别多新东西，但是对于数据库这部分有可能演进的路线更加清晰了。硬件的更新 HDD -> SSD -> PCIe 甚至可以满足绝大多数情况下可以满足要求了，这是 Scale Up。如果这样也不行了，就分库分表，加数据库访问层。这些之外就是高可用、备份、SQL优化等基础工作了。</p>
+
+<h3>Jing.fm</h3>
+
+<p>创始人是中俄混血，学古典音乐的，要实现一个非常理想化状态的音乐产品，要学习音乐的各种属性，并且根据这些属性来进行分类，让用户通过语意化的输入来推荐，而且是可以理解不同人对各种情绪的状态进行相对硬的匹配，就是说你的悲伤和我的悲伤是不同的悲伤这个产品也试图能够识别。同去的都是工程师同学，从工程师的角度看这个产品，觉得这产品简直太理想了，难度太大了，各个方面似乎都不是小型创业团队能搞定的事情。不过以不被鄙视的事是不值得去做的这个观点看，这事显然是很值得去做的，而且只能靠这跨界的同学去搞了。</p>
+
+<h3>有道云笔记</h3>
+
+<p>各种数据，没记太清，好像用户是1000万，后台技术采用了有道自己开发的分布式存储、分析、查询的底层技术，然后在上边做了很多封装，整体架构非常复杂，对于一个笔记产品似乎有过度设计的嫌疑。PC客户端/移动客户端还是用了不同的 API 接口，这个更不是很理解了，是人多还是真不怕麻烦？总体感觉是，如果一家创业公司这么搞，死的会很惨啊 &#8230;</p>
+
+<h3>总体感觉</h3>
+
+<p>大家都感觉这种技术会议有点水了，可能并不是水了，不知道是不是最近几年各种会议太多了，再加上各种社交媒体导致很多技术方向架构平常都有很多的了解，反而在这种大会上的演讲在有限时间内反而不太容易像前几年那样有特别多的全新信息了，到还是会上碰到的朋友闲聊有不少有意思的收获和共鸣。</p>
+
+<p>这次感觉最深的是，相对于国内一些大公司的产品、架构来说，对于像雪球这样的小型创业公司来说我们的学习对象是 Github 这种，使用最常用的开源产品和解决方案、用最简单的架构、自己去开发各种合适的提高效率的小工具。</p>
+
+<p>还有国内好像并没有一个专门针对中小型互联网公司的技术会议，其实对于中小型的公司来说，关注的点更分散一些，用什么Web服务器、用什么缓存服务器、服务器配置是什么样的、工程管理是什么样的、怎么做代码审查、怎么做测试、怎么招人这样的问题无数啊，而从大公司来的经验往往都不是很适合的，如果有类似的交流会真很愿意参加。</p>
+
+        
+        
+    </div>
+    <div class="meta">
+        <div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-25T22:44:00+08:00" pubdate data-updated="true">Apr 25<span>th</span>, 2013</time></div>
+        <div class="tags">
+
+</div>
+        
+        <span class="comments"><a href="/blog/2013/04/25/qcon-beijing-2013/#disqus_thread">Comments</a></span>
+        
+    </div>
+</article>
 
 
     <article class="post">
@@ -365,7 +446,7 @@ May 16 10:07:16 w2 kernel: [ 8985.860399]  [&lt;ffffffff810121b2&gt;] ? system_c
     
     <a href="/blog/archives" class="center">Blog Archives</a>
 </nav></div>
-	<footer class="inner">Copyright &copy; 2012 Open Spirits</footer>
+	<footer class="inner">Copyright &copy; 2013 Open Spirits</footer>
 	<script src="/javascripts/jquery.fancybox.pack.js"></script>
 <script src="/javascripts/slash.js"></script>
 
